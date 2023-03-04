@@ -1,13 +1,13 @@
 import pygame ,sys, random
 #Tao nen chay lien tuc
 def draw_floor():
-    screen.blit(floor,(floor_x_position, 600)) #set toa do floor_x_position, 600
-    screen.blit(floor,(floor_x_position+423, 600)) #set toa do loor_x_position+423, 600
+    screen.blit(floor,(floor_x_position, 650)) #set toa do floor_x_position, 600
+    screen.blit(floor,(floor_x_position+423, 650)) #set toa do loor_x_position+423, 600
 #Tao xuat hien ong cho game
 def create_pipe():
     random_pipe_pos = random.choice(pipe_height) #chon chieu cao ngau nhien tu pipe_height
     bottom_pipe = pipe_surface.get_rect(midtop = (500, random_pipe_pos))
-    top_pipe = pipe_surface.get_rect(midtop = (500, random_pipe_pos-600))
+    top_pipe = pipe_surface.get_rect(midtop = (500, random_pipe_pos-700))
     return bottom_pipe, top_pipe
 #Tao cac ong
 def move_pipe(pipes):
@@ -22,7 +22,11 @@ def draw_pipe(pipes) :
         else :
             flip_pipe = pygame.transform.flip(pipe_surface,False, True)
             screen.blit(flip_pipe, pipe) 
-
+# Xu li va cham
+def check_collosion(pipes):
+    for pipe in pipes :
+        if bird_rect.collidrect(pipe) : #collidrect() : ham va cham cua pygame
+            print("Va cham")
 pygame.init() #Khoi tao pygame
 
 # Tao man hinh chinh

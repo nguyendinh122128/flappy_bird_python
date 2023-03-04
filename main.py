@@ -25,7 +25,7 @@ def draw_pipe(pipes) :
 # Xu li va cham
 def check_collosion(pipes):
     for pipe in pipes :
-        if bird_rect.collidrect(pipe) : #collidrect() : ham va cham cua pygame
+        if bird_rect.colliderect(pipe) : #collidrect() : ham va cham cua pygame
             print("Va cham")
 pygame.init() #Khoi tao pygame
 
@@ -60,6 +60,7 @@ pipe_height = [350,450,500]
 spawnpipe = pygame.USEREVENT
 pygame.time.set_timer(spawnpipe, 1200)
 
+
 # Tao chuoi vong lap game
 while True:
     for event in pygame.event.get():
@@ -84,10 +85,15 @@ while True:
     #pipe
     pipe_list = move_pipe(pipe_list)
     draw_pipe(pipe_list)
+    # Chay va cham cua chim
+    check_collosion(pipe_list)
+    
     #San
     floor_x_position -= 1 # NO di chuyen
     draw_floor() #goi ham
     if floor_x_position <= -432:
         floor_x_position = 0
+
+    
     pygame.display.update()
     clock.tick(120) #FPS = 120            

@@ -182,10 +182,5 @@ while True:
 
     
     pygame.display.update()
-<<<<<<< HEAD
-    clock.tick(120) #FPS = 120            
-
-    #Ngay 6/3/23 loi git quas
-=======
-    clock.tick(120) #FPS = 120            
->>>>>>> 7db6275 (web Flappy Bird)
+    
+    #Ngay 6/3/23 loi git qua

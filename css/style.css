@@ -1,0 +1,166 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #cdcdcd;
+}
+
+/* Dùng chung */
+.text-white{
+    color: #fff !important;
+}
+.text-black{
+    color: #000 !important;
+}
+.inline{
+    display: inline;
+}
+.row{
+
+}
+.row::after{
+    content:"";
+    display: flex;
+    clear: both;
+}
+.col{
+    float: left;
+}
+.col-1{
+    width: 100%;
+}
+.col-2{
+    width: 50%;
+}
+.col-3{
+    width: 33.33333%;
+}
+.col-4{
+    width: 25%;
+}
+.col-5{
+    width: 20%;
+}
+.clear{
+    clear: both;
+}
+/* body {
+      background: linear-gradient(323deg, rgb(254, 254, 254) 20%, rgb(118, 118, 118) 50%, rgb(0, 0, 0) 50%, rgb(111, 111, 111) 75%);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+} */
+
+
+/* Header */
+.header{
+    width: 100%;
+    height: 62px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    line-height: 82px;
+
+    /*  */
+    background: linear-gradient(to right , rgb(242, 242, 242), rgb(40, 45, 40) );
+    border-bottom:3px solid green ;
+
+}
+
+.header .header-logo {
+    float: left;
+    width: 20%;
+}
+
+.header .header-menu {
+    /* float: left; */
+    width: 60%;
+    text-align: justify;
+    display: inline-block;
+    align-items: center;
+    line-height: 62px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.header-menu li{
+    display:inline-block ;
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+.header-menu li:hover{
+    background-color: #070b08;
+    cursor: pointer;
+}
+
+.header .header-install {
+    float: right;
+    width: 20%;
+    line-height: 62px;
+    
+}
+.header .header-install a{
+    background: linear-gradient(323deg, rgb(226, 231, 218) 20%, rgb(194, 231, 178) 50%, rgb(151, 153, 143) 50%, rgb(167, 239, 194) 75%);
+    padding: 8px;
+    border-radius: 10%;
+}
+.header .header-install a:hover{
+    /* transform: translate(-2px, -5px) rotate(-20deg); */
+}
+/* Main */
+.main{
+    position: relative;
+    width: 100%;
+}
+.main .banner img{
+    width: 100%;
+}
+.main .main-content{
+    display: flex;
+    position: absolute;
+    top: 220px;
+    left: 400px;
+    font-weight: 3000;
+    font-size: 40px;
+}
+.main .main-content h1{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.main .main-content h1:hover{
+
+    transform: translate(-2px, -5px) rotate(-20deg);
+}
+.main .main-logo{
+    position: absolute;
+    top: 140px;
+    right: 348px;
+}
+.main .main-logo:hover{
+    transform: translate(-50px, -84px) rotate(-20deg);
+
+}

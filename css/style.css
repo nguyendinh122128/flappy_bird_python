@@ -63,12 +63,13 @@ tr:nth-child(even) {
 .clear{
     clear: both;
 }
-/* body {
-      background: linear-gradient(323deg, rgb(254, 254, 254) 20%, rgb(118, 118, 118) 50%, rgb(0, 0, 0) 50%, rgb(111, 111, 111) 75%);
+body {
+      /* background: linear-gradient(323deg, rgb(254, 254, 254) 20%, rgb(118, 118, 118) 50%, rgb(0, 0, 0) 50%, rgb(111, 111, 111) 75%);
       margin: 0;
       padding: 0;
-      height: 100vh;
-} */
+      height: 100vh; */
+    /* background-image: url(../assets/flappy-bird-background-web.png) ; */
+}
 
 
 /* Header */
@@ -163,4 +164,21 @@ tr:nth-child(even) {
 .main .main-logo:hover{
     transform: translate(-50px, -84px) rotate(-20deg);
 
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    background-image: url("../assets/footer-image.jpg") ;
+    
+}
+.footer .footer-head{
+    height: 248px;
+    text-align: center;
+    border-top:2px solid #fff ;
+    margin-top: -10px;
+}
+.footer .footer-head h1{
+    font-size: 48px;
+    font-weight: 600;
 }
